@@ -1,101 +1,111 @@
 import Image from "next/image";
-
+import { Card } from "@/components/ui/card";
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return(
+    <div className="bg-white ">
+      <div className="bg-[#f2f0ff] h-[560px] grid grid-cols-3 w-[100%] mx-auto  text-black">
+     
+        
+        <div className="ml-[70px]"> <Image src="/image.png" alt="" width={300} height={300}/> </div>
+        <div className="text-lg text-pink-500 py-36 -ml-48 ">Best Furniture For Your Castle.... <br /><br />
+        <div className="text-4xl text-black flex justify-items-start font-extrabold ">New Furniture Collection  <br />
+        Trends in 2020 </div> <br />
+        <div className="text-xs text-[#8A8FB9]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing <br />
+        in phasellus non in justo. <div/>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+        
+        <div className="mt-[22px] -ml-44"><Image src="/sofaaaa.png" alt="" width={600} height={600}/> </div> </div>
+      <div className="flex justify-center  text-2xl font-extrabold  py-24 text-[#1A0B5B]">Featured Products</div>
+      <div className="grid grid-cols-4  justify-items-center my-[-5%] mx-[24%] ">
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card> </div>
+      
+      <div className="py-52 flex justify-center text-2xl font-extrabold  text-[#1A0B5B] ">Latest Products</div>
+      <div className="grid grid-cols-4 justify-items-center py-0 mx-[35%] ">
+      <h6>New arrival</h6> 
+      <h6>Best seller</h6>
+      <h6>Featured</h6>
+      <h6>Special offer</h6> </div>
+      <div className="grid grid-cols-3  justify-items-center py-20 mx-[24%] ">
+      <Card className="bg-purple-600 w-[240px] h-[240px]"> hi</Card>
+      <Card className="bg-purple-600 w-[240px] h-[240px]"> hi</Card>
+      <Card className="bg-purple-600 w-[240px] h-[240px]"> hi</Card>
+       </div>
+       <div className="grid grid-cols-3 py-24 justify-items-center mx-[24%] ">
+      <Card className="bg-purple-600 w-[240px] h-[240px]"> hi</Card>
+      <Card className="bg-purple-600 w-[240px] h-[240px]"> hi</Card>
+      <Card className="bg-purple-600 w-[240px] h-[240px]"> hi</Card>
+       </div>
+       <div className="flex justify-center  text-xl font-extrabold  py-10 text-[#1A0B5B]">What Shopex offers</div>
+       <div className="grid grid-cols-4  justify-items-center py-10 mx-[24%] ">
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+       
+       </div>
+
+       <div className="bg-[#f2f0ff]  w-[100%] mt-10 h-[370px] grid grid-cols-2">
+        <div className="py-4 ml-80"><Image src="/sofa2.png" alt="" width={350} height={350}/></div>
+        <div >
+        <div className="py-16 text-[#151875] text-3xl font-extrabold -ml-20">Unique Features Of leatest & <br />
+        Trending Poducts 
+        </div> <div className="-ml-20 ">
+        <li className="text-sm text-gray-400 font-extralight">All frames constructed with hardwood solids and laminates
+        </li>
+        <li className="text-sm text-gray-400 font-extralight">All frames constructed with hardwood solids and laminates
+        </li>
+        <li className="text-sm text-gray-400 font-extralight">All frames constructed with hardwood solids and laminates
+        </li>
+        <li className="text-sm text-gray-400 font-extralight">All frames constructed with hardwood solids and laminates
+        </li></div>
+       </div></div>
+
+
+       <div className="flex justify-center  text-2xl font-extrabold  py-24 text-[#1A0B5B]">Trending Products</div>
+      <div className="grid grid-cols-4  justify-items-center my-[-5%] mx-[24%] ">
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[150px] h-[200px]"> hi</Card> </div>
+
+      <div className="grid grid-cols-3 py-24  justify-items-center my-[-5%] mx-[25%]">
+      <Card className="bg-purple-600 w-[240px] h-[200px]"> hi</Card>
+      <Card className="bg-purple-600 w-[240px] h-[200px]"> hi</Card>
+      <div className="grid grid-rows-3">
+      <Card className="bg-purple-600 w-[240px] h-[60px]"> hi</Card>
+      <Card className="bg-purple-600 w-[240px] h-[60px]"> hi</Card>
+      <Card className="bg-purple-600 w-[240px] h-[60px]"> hi</Card>
+      </div></div>
+      <div className="flex justify-center  text-2xl font-extrabold  py-24 text-[#1A0B5B]">Discount Item</div>
+     <div className="grid grid-cols-3 justify-items-center py-0 mx-[35%] ">
+      <h6>Wood Chair</h6> 
+      <h6>Plastic Chair</h6>
+      <h6>Sofa Collection</h6>
+      </div>
+      <div className=" bg-white w-[1000px] ml-[350px] h-[500px] grid grid-cols-2 justify-center items-center">
+        
+          <div className="py-16 text-[#151875] text-2xl font-extrabold ">20% Discount Of All Products <br />
+            <div className="text-lg text-[#FB2E86] mt-4 font-extralight">Eams Sofa Compact</div>
+            <div className="text-sm font-extralight mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit. Eu eget <br /> 
+            feugiat habitasse nec, bibendum condimentum.</div>
+            <div className="grid grid-cols-2"><div className="text-sm font-extralight mt-4 text-gray-400">
+              Material expose like metals <div className="text-sm font-extralight mt-4 text-gray-400">
+                Simple neutral colours.</div></div>
+            <div className="text-sm font-extralight mt-4 text-gray-400">Clear lines and geomatric figures
+              <div className="text-sm font-extralight mt-4 text-gray-400">Material expose like metals</div>
+              </div>
+            </div>
+          </div>
+        <div><Image src="/brchair.png" alt="i" height={400} width={400}/></div></div>
+
+        <div className="flex justify-center  text-2xl font-extrabold  py-24 text-[#1A0B5B]">Top Categories</div>
     </div>
-  );
-}
+
+    
+    
+  )}
