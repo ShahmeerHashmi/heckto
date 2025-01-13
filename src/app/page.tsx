@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card"
 import NewsletterSection from "@/components/home/NewsletterSection"
 import CompanyLogos from "@/components/home/CompanyLogos"
 import LatestBlog from "@/components/home/LatestBlog"
+import LatestProducts from "@/components/home/LatestProducts"
 
 export default function Home() {
   return (
@@ -19,34 +20,7 @@ export default function Home() {
       <FeaturedProducts />
 
       {/* Latest Products Section */}
-      <section className="container mx-auto py-8 sm:py-16 px-4">
-        <h2 className="text-center text-xl sm:text-2xl font-extrabold text-primary-dark mb-6 sm:mb-12">
-          Latest Products
-        </h2>
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
-          <button className="text-sm sm:text-base text-secondary hover:text-accent transition-colors">New arrival</button>
-          <button className="text-sm sm:text-base text-secondary hover:text-accent transition-colors">Best seller</button>
-          <button className="text-sm sm:text-base text-secondary hover:text-accent transition-colors">Featured</button>
-          <button className="text-sm sm:text-base text-secondary hover:text-accent transition-colors">Special offer</button>
-        </div>
-        <div className="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <Card key={item} className="p-3 sm:p-4 hover:shadow-lg transition-shadow">
-              <div className="h-48 sm:h-60 relative mb-3 sm:mb-4">
-                <Image
-                  src={`/image ${1167 + item}.png`}
-                  alt="Product image"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 450px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw"
-                />
-              </div>
-              <h3 className="text-sm sm:text-base font-semibold">Product Name</h3>
-              <p className="text-sm sm:text-base text-accent">$299.00</p>
-            </Card>
-          ))}
-        </div>
-      </section>
+      <LatestProducts />
 
       {/* What Shopex Offers */}
       <section className="container mx-auto py-8 sm:py-16 px-4">

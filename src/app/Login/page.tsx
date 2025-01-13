@@ -34,7 +34,7 @@ export default function LoginPage() {
         <div className="max-w-md mx-auto bg-white rounded-lg shadow-sm p-8">
           <h2 className="text-2xl font-bold text-center text-[#151875] mb-6">Login</h2>
           <p className="text-center text-gray-600 mb-8">
-            Please login using account detail bellow.
+            Please login using account detail below.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -88,7 +88,7 @@ export default function LoginPage() {
         </div>
 
         {/* Company Logos */}
-        <div className="mt-24 grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-50">
+        <div className="mt-24 grid grid-cols-2 md:grid-cols-5 gap-8 ml-80 items-center opacity-50">
           <Image
             src="/logosss.jpg"
             alt="Company logos"
