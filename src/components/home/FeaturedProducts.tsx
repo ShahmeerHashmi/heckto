@@ -24,7 +24,8 @@ export const FeaturedProducts = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchProducts = async () => {
+const fetchProducts = async () => {
+    console.log('Fetching products...');
       try {
         const response = await fetch('https://fakestoreapi.com/products');
         if (!response.ok) {
