@@ -9,7 +9,6 @@ export interface Product {
   id: number;
   title: string;
   price: number;
-  
   category: string;
   image: string;
   rating: {
@@ -43,8 +42,6 @@ export const TopCategories = () => {
     fetchProducts();
   }, []);
 
-  // Truncate description to 15 words
-  
   // Truncate title to 3 words
   const truncateTitle = (text: string, maxWords: number) => {
     const words = text.split(' ');
@@ -105,52 +102,56 @@ export const TopCategories = () => {
         {/* Mobile Slider View */}
         <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 sm:hidden">
           {topCategories.map((category, index) => (
-            <div key={index} className="snap-center flex-shrink-0 w-[280px] mx-2 first:ml-0 last:mr-0">
-              <Card className="relative group">
-                <div className="bg-[#F6F7FB] rounded-full p-4 w-full aspect-square flex items-center justify-center">
-                  <Image
-                    src={category.image}
-                    alt={category.title}
-                    width={160}
-                    height={160}
-                    className="object-contain transition-transform group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-center mt-3 mb-4">
-                  <h3 className="text-[#151875] text-sm font-bold">
-                    {truncateTitle(category.title, 3)}
-                  </h3>
-                  <p className="text-[#151875] text-sm">
-                   
-                  </p>
-                </div>
-              </Card>
-            </div>
+            <Link key={index} href={`/product/${category.id}`} passHref>
+              <div className="snap-center flex-shrink-0 w-[280px] mx-2 first:ml-0 last:mr-0">
+                <Card className="relative group">
+                  <div className="bg-[#F6F7FB] rounded-full p-4 w-full aspect-square flex items-center justify-center">
+                    <Image
+                      src={category.image}
+                      alt={category.title}
+                      width={160}
+                      height={160}
+                      className="object-contain transition-transform group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="text-center mt-3 mb-4">
+                    <h3 className="text-[#151875] text-sm font-bold">
+                      {truncateTitle(category.title, 3)}
+                    </h3>
+                    <p className="text-[#151875] text-sm">
+                      {/* Add any additional text here */}
+                    </p>
+                  </div>
+                </Card>
+              </div>
+            </Link>
           ))}
         </div>
 
         {/* Desktop Grid View */}
         <div className="hidden sm:flex flex-wrap justify-center gap-4 md:gap-8">
           {topCategories.map((category, index) => (
-            <Card key={index} className="relative group">
-              <div className="bg-[#F6F7FB] rounded-full p-8 w-[270px] h-[270px] flex items-center justify-center">
-                <Image
-                  src={category.image}
-                  alt={category.title}
-                  width={200}
-                  height={200}
-                  className="object-contain transition-transform group-hover:scale-110"
-                />
-              </div>
-              <div className="text-center mt-4 mb-6">
-                <h3 className="text-[#151875] font-bold">
-                  {truncateTitle(category.title, 3)}
-                </h3>
-                <p className="text-[#151875]">
-                  
-                </p>
-              </div>
-            </Card>
+            <Link key={index} href={`/product/${category.id}`} passHref>
+              <Card className="relative group">
+                <div className="bg-[#F6F7FB] rounded-full p-8 w-[270px] h-[270px] flex items-center justify-center">
+                  <Image
+                    src={category.image}
+                    alt={category.title}
+                    width={200}
+                    height={200}
+                    className="object-contain transition-transform group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-center mt-4 mb-6">
+                  <h3 className="text-[#151875] font-bold">
+                    {truncateTitle(category.title, 3)}
+                  </h3>
+                  <p className="text-[#151875]">
+                    {/* Add any additional text here */}
+                  </p>
+                </div>
+              </Card>
+            </Link>
           ))}
         </div>
 
@@ -175,5 +176,4 @@ export const TopCategories = () => {
     </section>
   );
 };
-
 export default TopCategories;

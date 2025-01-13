@@ -43,13 +43,7 @@ export const TrendingProducts = () => {
   }, []);
 
   // Truncate description to a specified number of words
-  const truncateDescription = (text: string, maxWords: number) => {
-    const words = text.split(" ");
-    if (words.length > maxWords) {
-      return words.slice(0, maxWords).join(" ") + "...";
-    }
-    return text;
-  };
+  
 
   // Truncate title to a specified number of words
   const truncateTitle = (text: string, maxWords: number) => {
